@@ -1,45 +1,86 @@
 import React from 'react';
-import { Paper, Grid, makeStyles, TextField } from '@material-ui/core'
+import { Paper, Grid, makeStyles, Input, Typography, Button } from '@material-ui/core'
+import styles from './styles'
 
-const userStyles = makeStyles(() => ({
-    paper: {
-        margin: '70px auto'
-    }
-}))
+const componentStyles = makeStyles(styles)
 
 
 const auth = () => {
-    const classes = userStyles()
+    const classes = componentStyles()
 
     return (<>
-        <Grid
-         container
+        <Paper
+          className={classes.paper}
         >
             <Grid
-             item
-             className={{ margin: '70px auto' }}
-             xl={4}
-             lg={6}
-             md={6}
-             sm={8}
-             xs={10}
+                container
+                className={classes.gridRoot}
+                spacing={4}
+                justify="center"
             >
-                <Paper
-                  elevation={3}
+                <Grid item>
+                    <Typography
+                        className={classes.titleComponent}
+                    >
+                        Autenticador 
+                    </Typography>
+                </Grid>
+                <Grid
+                    item
+                    xs={12}
                 >
-                    <Grid container>
-                        <Grid
-                          item
-                          xs={10}
-                        >    
-                            <TextField 
-                                label="Email"
-                            />
-                        </Grid>
+                    <Typography
+                        className={classes.labelInput}
+                    >
+                        Email 
+                    </Typography>
+                    <Input
+                        placeholder="Digite seu email"
+                        rows={20}
+                        fullWidth={true}
+                    />
+                </Grid>
+                <Grid
+                    item
+                    xs={12}
+                >
+                    <Typography
+                        className={classes.labelInput}
+                    >
+                        Senha 
+                    </Typography>
+                    <Input
+                        placeholder="Digite sua senha"
+                        rows={20}
+                        fullWidth={true}
+                    />
+                </Grid>
+                <Grid
+                    direction="row"
+                    container
+                    className={classes.buttonGroup}
+                    justify="flex-end"
+
+                >
+                    <Grid
+                        item
+                    >
+                        <Button
+                            color="primary"
+                            size="small"
+                        >
+                            Cadastra-se
+                        </Button>
+                        <Button
+                            variant="contained"
+                            color="primary"
+                        >
+                            Acessar
+                        </Button>
                     </Grid>
-                </Paper>
+                </Grid>
             </Grid>
-        </Grid>
+        </Paper>
     </>)
 }
 
