@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 import App from './modules/home/App';
 import Auth from './modules/auth/Auth'
 import * as serviceWorker from './serviceWorker';
+import SignUp from './modules/auth/signUp'
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <Auth />
+    <SignUp />
   </React.StrictMode>,
   document.getElementById('root')
 );
