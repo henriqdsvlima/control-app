@@ -1,11 +1,9 @@
-import React from 'react';
+import React  from 'react';
 import { Paper, Grid, makeStyles, Input, Typography, Button, Checkbox } from '@material-ui/core'
 import styles from './styles'
 
 const componentStyles = makeStyles(styles)
-
-
-const cadastro = () => {
+const Cadastro = () => {
     const classes = componentStyles()
 
 
@@ -134,14 +132,18 @@ const cadastro = () => {
                             variant="contained"
                             color="primary"
                         >
+                           
                             Cadastrar
+                            
+                            
                         </Button>
                     </Grid>
                 </Grid>
             </Grid>
         </Paper>
+
     </>)
 }
 
 
-export default cadastro
+export default Cadastro

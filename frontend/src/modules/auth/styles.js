@@ -14,5 +14,8 @@ export default (theme) => ({
     },
     buttonGroup: {
         padding: '0 20px 30px 0' 
+    },
+    buttonRegister: {
+        marginRight: '10px',
     }
 })

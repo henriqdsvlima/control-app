@@ -65,7 +65,7 @@ const auth = () => {
                     <Grid
                         item
                     >
-                        <Button
+                        <Button className={classes.buttonRegister}
                             color="primary"
                             size="small"
                         >
