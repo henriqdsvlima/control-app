@@ -9,7 +9,7 @@ export default props =>
 <BrowserRouter>
    <Switch>
         <Route  exact path='/'>
-            < Auth />
+            <Auth />
         </Route>
 
         <Route path='/signup'>
