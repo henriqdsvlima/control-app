@@ -1,6 +1,7 @@
 import React from 'react';
 import { Paper, Grid, makeStyles, Input, Typography, Button } from '@material-ui/core'
 import styles from './styles'
+import { Link } from 'react-router-dom';
 
 const componentStyles = makeStyles(styles)
 

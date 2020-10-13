@@ -105,18 +105,21 @@ const Cadastro = () => {
                     />
                 </Grid>
                 <Grid
-                    item
-                    xs={12}
-                >
-                                  <Typography
+                container
+                item
+                xs={12}
+                direction="row"
+                >                
+                    <Checkbox
+                        value="checked"
+                        inputProps={{ 'aria-label': 'Checkbox A' }}
+                    />
+                    <Typography
                         className={classes.labelInput}
                     >
                        Aceito os Termos de Condições
                     </Typography>
-                <Checkbox
-                    value="checkedA"
-                    inputProps={{ 'aria-label': 'Checkbox A' }}
-                />
+  
                 </Grid>
                 <Grid
                     direction="row"

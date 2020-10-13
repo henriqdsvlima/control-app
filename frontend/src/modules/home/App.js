@@ -5,7 +5,7 @@ import {/*Aqui voce vai colocar as dependências do MaterialUI ex: ThemeProvider
 function App() {
 
   return (
-  <h1>Teste</h1>
+  <h1>Teste<br />Você está logado</h1>
   );
 }
 
