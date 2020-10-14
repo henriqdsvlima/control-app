@@ -5,7 +5,7 @@ import {isAuthenticated} from './Authentication';
 
 import App from '../home/App'
 import Auth from './Auth'
-import Cadastro from './SignUp'
+import Cadastro from './signUp'
 
 const PrivateRoute = ({component: Component, ...rest}) =>(
     <Route {...rest} render={props =>(
@@ -17,13 +17,22 @@ const PrivateRoute = ({component: Component, ...rest}) =>(
     )} />
 );
 
+// const AuthRouter = ({ ...rest }) =>  (
+//     <Route {...rest} render={props =>
+//         (
+//          <Redirect to="/#" />
+//         )
+//     } />
+// )
+
 export default props => {
     return (
         <BrowserRouter>
         <Switch>
-            <Route path="/" exact component={Auth} />
-            <Route path="/singup" component={Cadastro} />
+            <Route path="/auth" exact component={Auth} />
+            <Route path="/signup" component={Cadastro} />
             <PrivateRoute path='/app' component={App} />
+        
         </Switch>
         </BrowserRouter>
     )

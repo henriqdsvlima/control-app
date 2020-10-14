@@ -3,10 +3,6 @@ import { Paper, Grid, makeStyles, Input, Typography, Button,} from '@material-ui
 import styles from './styles'
 import { Link } from 'react-router-dom';
 
-import App from '../home/App'
-import Auth from './Auth'
-import Cadastro from './SignUp'
-
 const componentStyles = makeStyles(styles)
 
 
@@ -70,21 +66,27 @@ const auth = () => {
                     <Grid
                         item
                     >
-                        <Button className={classes.buttonRegister}
-                            color="primary"
-                            size="small"
+                        <Link
+                          to="/signup"
+                        > 
+                            <Button className={classes.buttonRegister}
+                                color="primary"
+                                size="small"
+                            >
+                                Cadastra-se
+                            </Button>
+                        </Link>
+                        <Link
+                            to="/app"
                         >
-                        <Link href="/singup"  />
+                            <Button
+                                variant="contained"
+                                color="primary"
+                            >
 
-                            Cadastra-se
-                        </Button>
-                        <Button
-                            variant="contained"
-                            color="primary"
-                        >
-
-                            Acessar
-                        </Button>
+                                Acessar
+                            </Button>
+                        </Link>
                     </Grid>
                 </Grid>
             </Grid>

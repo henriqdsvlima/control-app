@@ -1,10 +1,7 @@
 import React  from 'react';
 import { Paper, Grid, makeStyles, Input, Typography, Button, Checkbox} from '@material-ui/core'
 import styles from './styles'
-import App from '../home/App'
-import Auth from './Auth'
-
-
+import { Link } from 'react-router-dom';
 
 const componentStyles = makeStyles(styles)
 const Cadastro = () => {
@@ -44,23 +41,6 @@ const Cadastro = () => {
                         fullWidth={true}
                     />
                 </Grid>
-{/*                 <Grid
-                    item
-                    xs={12}
-                >
-                    <Typography
-                        className={classes.labelInput}
-                    >
-                        Telefone 
-                    </Typography>
-                    <Input
-                        placeholder="Digite seu telefone"
-                        rows={20}
-                        fullWidth={true}
-                        type = "number"
-
-                    />
-                </Grid> */}
                 <Grid
                     item
                     xs={12}
@@ -134,17 +114,20 @@ const Cadastro = () => {
                     <Grid
                         item
                     >
-
-                        <Button
-                            variant="contained"
-                            color="primary"
+                        <Link
+                            to="/auth"
                         >
-                            
+                            <Button
+                                variant="contained"
+                                color="primary"
+                            >
+                                
 
-                            Cadastrar
-                            
-                            
-                        </Button>
+                                Cadastrar
+                                
+                                
+                            </Button>
+                        </Link>
                     </Grid>
                 </Grid>
             </Grid>
