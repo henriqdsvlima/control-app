@@ -1,7 +1,11 @@
 import React from 'react';
-import { Paper, Grid, makeStyles, Input, Typography, Button } from '@material-ui/core'
+import { Paper, Grid, makeStyles, Input, Typography, Button,} from '@material-ui/core'
 import styles from './styles'
 import { Link } from 'react-router-dom';
+
+import App from '../home/App'
+import Auth from './Auth'
+import Cadastro from './SignUp'
 
 const componentStyles = makeStyles(styles)
 
@@ -70,12 +74,15 @@ const auth = () => {
                             color="primary"
                             size="small"
                         >
+                        <Link href="/singup"  />
+
                             Cadastra-se
                         </Button>
                         <Button
                             variant="contained"
                             color="primary"
                         >
+
                             Acessar
                         </Button>
                     </Grid>

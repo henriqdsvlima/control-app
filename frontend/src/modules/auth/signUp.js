@@ -1,6 +1,10 @@
 import React  from 'react';
-import { Paper, Grid, makeStyles, Input, Typography, Button, Checkbox } from '@material-ui/core'
+import { Paper, Grid, makeStyles, Input, Typography, Button, Checkbox} from '@material-ui/core'
 import styles from './styles'
+import App from '../home/App'
+import Auth from './Auth'
+
+
 
 const componentStyles = makeStyles(styles)
 const Cadastro = () => {
@@ -105,10 +109,10 @@ const Cadastro = () => {
                     />
                 </Grid>
                 <Grid
-                container
-                item
-                xs={12}
-                direction="row"
+                    container
+                    item
+                    xs={12}
+                    direction="row"
                 >                
                     <Checkbox
                         value="checked"
@@ -135,7 +139,8 @@ const Cadastro = () => {
                             variant="contained"
                             color="primary"
                         >
-                           
+                            
+
                             Cadastrar
                             
                             

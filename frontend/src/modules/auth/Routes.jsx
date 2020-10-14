@@ -1,11 +1,11 @@
 import React from 'react'
 import{BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
 
-import { isAuthenticated} from './Authentication';
+import {isAuthenticated} from './Authentication';
 
 import App from '../home/App'
-import Auth from '../auth/Auth'
-import Cadastro from '../auth/signUp'
+import Auth from './Auth'
+import Cadastro from './SignUp'
 
 const PrivateRoute = ({component: Component, ...rest}) =>(
     <Route {...rest} render={props =>(
@@ -17,19 +17,16 @@ const PrivateRoute = ({component: Component, ...rest}) =>(
     )} />
 );
 
-export default props =>
-<BrowserRouter>
-   <Switch>
-        <Route  exact path='/'>
-            <Auth />
-        </Route>
+export default props => {
+    return (
+        <BrowserRouter>
+        <Switch>
+            <Route path="/" exact component={Auth} />
+            <Route path="/singup" component={Cadastro} />
+            <PrivateRoute path='/app' component={App} />
+        </Switch>
+        </BrowserRouter>
+    )
+}
 
-        <Route path='/signup'>
-            <Cadastro />
-        </Route>
-        <PrivateRoute path = "/app">
-            <App />
-        </PrivateRoute>
-    </Switch>
-</BrowserRouter>
 
