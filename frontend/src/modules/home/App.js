@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import {/*Aqui voce vai colocar as dependências do MaterialUI ex: ThemeProvider*/ } from '@material-ui/core'
 
 
