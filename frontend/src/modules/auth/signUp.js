@@ -115,7 +115,7 @@ const Cadastro = () => {
                         item
                     >
                         <Link
-                            to="/auth"
+                            to="/#"
                         >
                             <Button
                                 variant="contained"

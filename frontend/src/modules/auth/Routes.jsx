@@ -29,7 +29,7 @@ export default props => {
     return (
         <BrowserRouter>
         <Switch>
-            <Route path="/auth" exact component={Auth} />
+            <Route path="/" exact component={Auth} />
             <Route path="/signup" component={Cadastro} />
             <PrivateRoute path='/app' component={App} />
         
