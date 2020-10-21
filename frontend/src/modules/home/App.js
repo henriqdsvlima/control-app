@@ -1,8 +1,8 @@
 import React from 'react';
-import { Tabs, Tab, makeStyles, Grid, Typography } from '@material-ui/core'
+import { Tabs, Tab, makeStyles, Grid, CardMedia, Card } from '@material-ui/core'
 import { TabContext, TabPanel } from '@material-ui/lab'
 import styles from './styles'
-
+import logo from '../../assets/logo.png'
 export default () => {
   const [currentTabValue, setCurrentTaValue] = React.useState("1")
   const componentStyles = makeStyles(styles)
@@ -14,36 +14,44 @@ export default () => {
 
   return (
     <Grid
-      container
-      justify="center"
+      container={true}
     >
       <Grid
         item
+        xs={12}
       >
         <TabContext
           value={currentTabValue}
         >
           <Grid
             container
-            spacing={1}
           >
             <Grid
               item
+              xs={2}
             >
-              <Typography
-                        className={classes.titleComponent}
-                    >
-                        Cadastro 
-              </Typography>
+              <Card
+                variant="outlined"
+                className={classes.root}
+              >
+                <CardMedia
+                  component="img"
+                  className={classes.logo}
+                  title="logo"
+                  image={logo}
+                />
+              </Card>
               <Tabs 
                 aria-label="simple tabs example"
                 orientation="vertical"
                 onChange={handleChange}
                 value={currentTabValue}
               >
-                <Tab label="Item One" value="1" />
-                <Tab label="Item Two" value="2" />
-                <Tab label="Item Three" value="3" />
+                <Tab label="Meus gastos" value="1" />
+                <Tab label="Pontos" value="2" />
+                <Tab label="Metas" value="3" />
+                <Tab label="Lembretes" value="4" />
+                <Tab label="Extratos" value="5" />
               </Tabs>
             </Grid>
             <Grid
