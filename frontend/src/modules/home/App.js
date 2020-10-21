@@ -1,11 +1,68 @@
 import React from 'react';
-import {/*Aqui voce vai colocar as dependências do MaterialUI ex: ThemeProvider*/ } from '@material-ui/core'
+import { Tabs, Tab, makeStyles, Grid, CardMedia, Card } from '@material-ui/core'
+import { TabContext, TabPanel } from '@material-ui/lab'
+import styles from './styles'
+import logo from '../../assets/logo.png'
+export default () => {
+  const [currentTabValue, setCurrentTaValue] = React.useState("1")
+  const componentStyles = makeStyles(styles)
+  const classes = componentStyles()
 
+  const handleChange = (_, newTabs) => {
+    setCurrentTaValue(newTabs)
+  }
 
-function App() {
   return (
-  <h1>Teste<br />Você está logado</h1>
-  );
+    <Grid
+      container={true}
+    >
+      <Grid
+        item
+        xs={12}
+      >
+        <TabContext
+          value={currentTabValue}
+        >
+          <Grid
+            container
+          >
+            <Grid
+              item
+              xs={2}
+            >
+              <Card
+                variant="outlined"
+                className={classes.root}
+              >
+                <CardMedia
+                  component="img"
+                  className={classes.logo}
+                  title="logo"
+                  image={logo}
+                />
+              </Card>
+              <Tabs 
+                aria-label="simple tabs example"
+                orientation="vertical"
+                onChange={handleChange}
+                value={currentTabValue}
+              >
+                <Tab label="Meus gastos" value="1" />
+                <Tab label="Pontos" value="2" />
+                <Tab label="Metas" value="3" />
+                <Tab label="Lembretes" value="4" />
+                <Tab label="Extratos" value="5" />
+              </Tabs>
+            </Grid>
+            <Grid
+              item
+            >
+              <TabPanel value="1">Item One</TabPanel>
+              <TabPanel value="2">Item two</TabPanel>
+            </Grid>
+          </Grid>
+        </TabContext>
+      </Grid>
+    </Grid>
+  )
 }
-
-export default App;
