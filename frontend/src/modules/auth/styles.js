@@ -1,4 +1,5 @@
 export default (theme) => ({
+
     paper: {
         margin: '100px auto',
         width: '600px'
