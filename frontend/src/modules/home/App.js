@@ -59,6 +59,7 @@ export default () => {
             >
               <TabPanel value="1">Item One</TabPanel>
               <TabPanel value="2">Item two</TabPanel>
+              <TabPanel value='3'>Item Three</TabPanel>
             </Grid>
           </Grid>
         </TabContext>
