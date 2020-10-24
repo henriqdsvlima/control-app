@@ -1,8 +1,19 @@
 export default (theme) => ({
-    container: {
-        background: 'red',
+    pointsContainer: {
+        margin: '0',
+        padding: '0',
     },
-    testingBackGround: {
-        border: '10px solid red',
+    pointsTitle: {
+        fontSize: '2rem',
+        margin: '14px 50px 0 39px'
     },
+    trophyItem: {
+        width: '16rem',
+        height: '22em',
+        position: 'relative',
+        top: '57px',
+        left: '1px',
+    },
+    testingList: {
+    }
 })
