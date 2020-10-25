@@ -3,6 +3,10 @@ import { Tabs, Tab, makeStyles, Grid, CardMedia, Card } from '@material-ui/core'
 import { TabContext, TabPanel } from '@material-ui/lab'
 import styles from './styles'
 import logo from '../../assets/logo.png'
+import Points from '../home/components/Points/Points'
+
+
+
 export default () => {
   const [currentTabValue, setCurrentTaValue] = React.useState("1")
   const componentStyles = makeStyles(styles)
@@ -41,7 +45,7 @@ export default () => {
                   image={logo}
                 />
               </Card>
-              <Tabs 
+              <Tabs  className={classes.root}
                 aria-label="simple tabs example"
                 orientation="vertical"
                 onChange={handleChange}
@@ -58,7 +62,7 @@ export default () => {
               item
             >
               <TabPanel value="1">Item One</TabPanel>
-              <TabPanel value="2">Item two</TabPanel>
+              <TabPanel value="2"><Points /></TabPanel>
               <TabPanel value='3'>Item Three</TabPanel>
             </Grid>
           </Grid>
